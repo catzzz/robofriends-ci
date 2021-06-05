@@ -51,6 +51,7 @@ jobs:
       - run: echo "A sally hello"
 workflows:
   # Name the workflow "welcome"
+  version: 2.1
   bobby_sally:
     # Run the welcome/run job in its own container
     jobs:
