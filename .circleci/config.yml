@@ -49,6 +49,13 @@ jobs:
     steps:
       - checkout
       - run: echo "A sally hello"
+  jimmy:
+  # Declare a dependency on the welcome-orb
+    docker: 
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: echo "A jimmy hello"
 workflows:
   # Name the workflow "welcome"
   version: 2.1
@@ -57,3 +64,4 @@ workflows:
     jobs:
       - bobby
       - sally
+      - jimmy
